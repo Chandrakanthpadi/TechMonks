@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechMonks | Modren monks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation bar started -->
+
+    <div id="nav">
+      <div id="brand">TechMonks</div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#choose">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Navigation bar Ended -->
+    <!-- Hero section Started-->
+
+    <div id="hero">
+      <div>We the modern monks</div>
+      create great stuff for your business.
+    </div>
+
+    <!-- Hero section Ended -->
+    <!-- Ourservices Started -->
+
+    <div id="aboutus">
+      <div class="sticky">About us</div>
+      <div class="side">
+        <div class="box">
+          <div class="title">ONE</div>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            velit sunt voluptatem quidem omnis earum corporis quia, atque esse
+            facilis?
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">TWO</div>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            velit sunt voluptatem quidem omnis earum corporis quia, atque esse
+            facilis?
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">THREE</div>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            velit sunt voluptatem quidem omnis earum corporis quia, atque esse
+            facilis?
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">FOUR</div>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            velit sunt voluptatem quidem omnis earum corporis quia, atque esse
+            facilis?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ourservices Ended -->
+    <!-- Why you choose us  Started-->
+
+    <div id="choose">
+      <di class="container">
+        <div class="box box1">Ourservices</div>
+        <div class="box box2">
+          <h2>Application development.</h2>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            praesentium?
+          </div>
+        </div>
+        <div class="box box3">
+          <h2>Testing & automation.</h2>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            praesentium?
+          </div>
+        </div>
+        <div class="box box4">
+          <h2>US IT recruiting.</h2>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            praesentium?
+          </div>
+        </div>
+        <div class="box box5">
+          <h2>Property preservation services.</h2>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            praesentium?
+          </div>
+        </div>
+        <div class="box box6">
+          <h2>Business process Services.</h2>
+          <div class="matter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            praesentium?
+          </div>
+        </div>
+      </di>
+    </div>
+
+    <!-- Why you choose us Ended  -->
+    <div id="contact">
+      <div class="container">
+        <div class="work">Let's work together</div>
+        <div class="info">
+          <div class="title">Contact Us</div>
+          <div>
+            <div class="mail">mailmeto@gmail.com</div>
+            <div class="num">+123456789</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    //   Scroll Behavious of the page
+    $("#nav ul a").on("click", function (e) {
+      const nav = document.getElementById("nav");
+      // nav.style = "padding-top:2em";
+      e.preventDefault();
+      const href = $(this).attr("href");
+      console.log(href);
+      if (href == "#hero") {
+        nav.style = "padding-top:10%";
+        document.getElementById("brand").style = "padding-left:20rem";
+      } else {
+        nav.style = "padding-top:2em";
+        document.getElementById("brand").style = "padding-left:2rem";
+      }
+      $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+    });
+    //   End of scroll behaviour
+
+    window.addEventListener("scroll", () => {
+      const nav = document.getElementById("nav");
+      const height = window.pageYOffset;
+      if (height >= 90) {
+        nav.style = "padding-top:0.5em;height:11vh;background-color:#f0f7ee;";
+        // box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+        document.getElementById("brand").style = "padding-left:3.5rem;";
+      } else {
+        nav.style = "padding-top:10%;";
+        document.getElementById("brand").style = "padding-left:20rem;";
+      }
+    });
+  </script>
+</html>
